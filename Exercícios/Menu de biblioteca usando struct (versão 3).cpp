@@ -8,6 +8,7 @@ struct Diaemprestimo{
     int dia, mes, ano;
 };
 
+/*Menu da biblioteca*/
 void Menu(){
     cout << "Menu:\nEscolha uma das opcoes:\n\n1 - Digitar data de emprestimo\n0 - Sair da biblioteca" << endl;
 }
@@ -34,6 +35,7 @@ int main()
             cout << "****\nSe desejar inserir novo emprestimo digite 1, caso contrario, digite 0:" << endl;
             cin >> nova_data;
             
+            /*Visualizar datas cadastradas:*/
             if(nova_data == 0){
                 cout << "Deseja ver as datas dos emprestimos?\n1 - Sim\n0 - Nao\n" << endl;
                 cin >> ver_datas;
