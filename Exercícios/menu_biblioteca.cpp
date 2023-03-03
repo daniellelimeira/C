@@ -1,9 +1,7 @@
 /******************************************************************************
-
                               Menu de Biblioteca
 			Com opções: inserir nova data de empréstimo
 				    imprimir datas de empréstimos
-
 *******************************************************************************/
 
 #include <iostream>
@@ -38,7 +36,7 @@ int main()
         
         // opcao de novo empréstimo
         if(entrada == 1){ 
-            while(posicaoAtual <= MAX_EMPRESTIMOS){
+            while(posicaoAtual < MAX_EMPRESTIMOS){
                 bool validacao_dia = false; // validar dia
                 while(!validacao_dia){
                     cout << "Dia: "; 
@@ -79,6 +77,11 @@ int main()
                 // Parar o laço caso o usuário não queria add mais empréstimos e entrada seja menor igual à MAX_EMPRESTIMOS
                 cout << "Deseja inserir outro empréstimo? [S/N] " << endl;
                 cin >> continuar;
+                
+                if(posicaoAtual == MAX_EMPRESTIMOS){
+                    cout << "Limite de cadastro atingido" << endl;
+                }
+                
                 if(continuar == 'N'){
                     break;
                 }
